@@ -1,0 +1,6 @@
+How to Create Project ?
+	django-admin startproject MyProject
+
+How to Create Application ?
+	django-admin startapp Myapp
+
