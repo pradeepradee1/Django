@@ -21,7 +21,11 @@ def display_get(request):
     
     response = Employee.objects.get(id__exact=2)
     print(response)
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> 836176e2f5e3e78c7299ba29157655e9102c6131
     response = Employee.objects.get(id__iexact=2)
     print(response)    
 
