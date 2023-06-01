@@ -88,7 +88,7 @@ def display_exclude(request):
     print(response)
 
     return Response("response")
-
+    
 
 @api_view(['POST'])
 def display_union(request):
