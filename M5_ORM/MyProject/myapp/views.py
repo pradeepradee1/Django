@@ -6,6 +6,26 @@ from rest_framework import status
 from myapp.models import Employee
 from django.db.models import Avg,Sum,Max,Min,Count,Q
 
+
+#CRUD 
+
+#Create
+@api_view(['POST'])
+def display_create(request):
+    print(Employee.objects.all().count())
+    #Adding Single Records
+    e=Employee(eno=4,ename='Dheeraj',esal=1234.0,eaddr='Delhi')
+    e.save()
+    print(Employee.objects.all().count())
+
+    #Adding Multiple Records
+    Employee.objects.bulk_create([Employee(eno=5,ename='DDD',esal=1000,eaddr='Hyd'),
+    Employee(eno=6,ename='HHH',esal=1000,eaddr='Hyd'),
+    Employee(eno=7,ename='MMM',esal=1000,eaddr='Hyd')])
+    print(Employee.objects.all().count())
+    return Response("response")    
+
+#Retrive
 @api_view(['POST'])
 def display_all(request):
     
@@ -123,22 +143,17 @@ def display_agg(request):
     return Response("response")
 
 
+#Update
 @api_view(['POST'])
-def display_create(request):
+def display_update(request):
     print(Employee.objects.all().count())
-    #Adding Single Records
-    e=Employee(eno=4,ename='Dheeraj',esal=1234.0,eaddr='Delhi')
+    #update Single Records
+    e=Employee.objects.get(eno=2)
+    e.ename='Radee'
     e.save()
-    print(Employee.objects.all().count())
-
-    #Adding Multiple Records
-    Employee.objects.bulk_create([Employee(eno=5,ename='DDD',esal=1000,eaddr='Hyd'),
-    Employee(eno=6,ename='HHH',esal=1000,eaddr='Hyd'),
-    Employee(eno=7,ename='MMM',esal=1000,eaddr='Hyd')])
-    print(Employee.objects.all().count())
     return Response("response")    
 
-
+#Delete
 @api_view(['POST'])
 def display_delete(request):
     print(Employee.objects.all().count())
@@ -158,15 +173,6 @@ def display_delete(request):
     return Response("response")
 
 
-@api_view(['POST'])
-def display_update(request):
-    print(Employee.objects.all().count())
-    
-    #update Single Records
-    e=Employee.objects.get(eno=2)
-    e.ename='Radee'
-    e.save()
 
-    return Response("response")    
 
 
