@@ -7,7 +7,7 @@ from myapp.models import Employee
 from django.db.models import Avg,Sum,Max,Min,Count,Q
 
 
-#CRUD 
+#CRUD
 
 #Create
 @api_view(['POST'])
