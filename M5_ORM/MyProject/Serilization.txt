@@ -1,0 +1,6 @@
+Serialization 
+1) It is the process of converting complex data types like Django model instances into native Python data types (such as dictionaries or lists)
+2) which can be rendered into JSON, XML, or other format types
+
+Deserilization
+It is the process of converting Python data formats to Django model instances
