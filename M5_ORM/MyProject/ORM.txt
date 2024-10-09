@@ -1,0 +1,7 @@
+What is ORM ?
+	
+	It is a feature that allows developers to interact with the database using Python code instead of writing raw SQL queries.
+
+	Django's ORM abstracts the database interactions, So You don’t need to write SQL queries
+	
+	Django automatically translates your Python code into SQL.
