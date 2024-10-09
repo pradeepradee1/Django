@@ -1,0 +1,3 @@
+What is Django REST Framework and why is it used ?
+  DRF is a powerful toolkit for building RESTful APIs in Django. 
+  It provides features like serializers, authentication, and more.
