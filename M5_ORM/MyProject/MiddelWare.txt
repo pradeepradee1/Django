@@ -1,0 +1,3 @@
+What is Middleware ?
+  Middleware is a layer of hooks in Django’s request/response processing. 
+  It is used to modify requests and responses (e.g., for authentication, session management, or caching).
