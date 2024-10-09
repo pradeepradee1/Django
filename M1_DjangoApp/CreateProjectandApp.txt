@@ -1,6 +1,11 @@
 How to Create Project ?
 	django-admin startproject MyProject
 
-How to Create Application ?
-	django-admin startapp Myapp
 
+How to Create Application ?	
+	cd MyProject
+	python manage.py startapp myapp
+
+
+How to run the application ?
+	python manage.py runserver
